@@ -1,0 +1,14 @@
+from fastapi import HTTPException, status
+
+class AppExceptions(Exception):
+    def __init__(self, detail, status_code: int = status.HTTP_400_BAD_REQUEST):
+        self.status_code = status_code
+        self.detail = detail
+
+class NotFoundError(AppExceptions):
+    def __init__(self, entity: str = "Entity"):
+        super().__init__(detail=f"{entity} not found", status_code=status.HTTP_404_NOT_FOUND)
+
+class OtherError(AppExceptions):
+    def __init__(self, exc: str):
+        super().__init__(detail=f"{exc}", status_code=status.HTTP_400_BAD_REQUEST)
