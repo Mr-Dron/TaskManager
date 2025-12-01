@@ -9,7 +9,6 @@ class TaskCreate(BaseModel):
     description: Optional[str] = None
     deadline: Optional[datetime] = None
 
-    creator_id: int
     responsible_id: Optional[int] = None
     project_id: int
 

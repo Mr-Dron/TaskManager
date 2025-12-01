@@ -22,7 +22,7 @@ class ReadDateValidatorMixin:
 
 class OutDateValidatorMixin:
 
-    datetime_fields = ["deadline"]
+    datetime_fields = ["deadline", "create_at"]
 
     @model_validator(mode="after")
     def valiedate_date(self):
