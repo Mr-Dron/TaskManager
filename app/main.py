@@ -24,7 +24,8 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 setup_exception_handler(app)
 
-routers_list = [test_routers.router, users.router, projects.router, tasks.router] 
+routers_list = [test_routers.router, users.router, 
+                projects.router, tasks.router, roles.router] 
 
 for router in routers_list:
     app.include_router(router)
