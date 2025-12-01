@@ -36,11 +36,14 @@ async def get_all_tasks(db: AsyncSession):
     return all_tasks
 
 
-async def update_task(id: int, update_date: tasks_schemas.TaskUpdate, db: AsyncSession):
+async def update_task(id: int, new_data: tasks_schemas.TaskUpdate, db: AsyncSession):
+
+    update_data = new_data.model_dump(exclude_unset=True)
 
     stmt = (
         update(Tasks)
         .where(Tasks.id == id)
+        .values(**update_data)
         .returning(Tasks)
     )
 

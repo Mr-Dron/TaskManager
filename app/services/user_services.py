@@ -25,7 +25,7 @@ async def create_user(user_data: user_schemas.UserCreate, db: AsyncSession):
     return await user_helpers.get_short_user_by_id(db=db, id=new_user.id)
 
 
-async def get_user(db: AsyncSession):
+async def get_all_users(db: AsyncSession):
 
     all_users =(await db.execute(select(Users))).scalars().all()
 
@@ -36,9 +36,12 @@ async def get_user(db: AsyncSession):
 
 async def update_user(id: int, new_data: user_schemas.UserUpdate, db: AsyncSession):
 
+    update_data = new_data.model_dump(exclude_unset=True)
+
     stmt = (
         update(Users)
         .where(Users.id == id)
+        .values(**update_data)
         .returning(Users)
     )
 

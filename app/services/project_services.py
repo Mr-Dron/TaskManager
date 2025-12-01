@@ -34,11 +34,14 @@ async def get_all_projects(db: AsyncSession):
     return all_projects
 
 
-async def update_project(id: int, update_data: project_schemas.ProjetUpdate, db: AsyncSession):
+async def update_project(id: int, new_data: project_schemas.ProjetUpdate, db: AsyncSession):
+
+    update_data = new_data.model_dump(exclude_unset=True)
 
     stmt = (
         update(Projects)
         .where(Projects.id == id)
+        .values(**update_data)
         .returning(Projects)
     )
 

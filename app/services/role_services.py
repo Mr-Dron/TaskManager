@@ -30,11 +30,14 @@ async def get_all_roles(db: AsyncSession):
     
     return all_roles
 
-async def update_role(id: int, update_data: roles_schemas.RoleUpdate, db: AsyncSession):
+async def update_role(id: int, new_data: roles_schemas.RoleUpdate, db: AsyncSession):
+
+    update_data = new_data.model_dump(exclude_unset=True)
 
     stmt = (
         update(Roles)
         .where(Roles.id == id)
+        .values(**update_data)
         .returning(Roles)
     )
 
