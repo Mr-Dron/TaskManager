@@ -1,7 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends, APIRouter
 
-from db.database import get_session
+from app.db.database import get_session
 from app.schemas import *
 
 from app.services import project_services

@@ -6,7 +6,7 @@ from app.schemas import *
 
 from app.services import role_services
 
-router = APIRouter("/role", tags=["Role"])
+router = APIRouter(prefix="/role", tags=["Role"])
 
 # создание роли
 @router.post("/", response_model=roles_schemas.RoleOut, status_code=status.HTTP_201_CREATED)

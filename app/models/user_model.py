@@ -22,5 +22,5 @@ class Users(Base):
     created_projects = relationship("Projects", back_populates="creator")
     projects = relationship("ProjectMembers", back_populates="members")
 
-    created_tasks = relationship("Tasks", back_populates="creator")
-    assigned_tasks = relationship("Tasks", back_populates="responsible")
+    created_tasks = relationship("Tasks", back_populates="creator", foreign_keys="Tasks.creator_id")
+    assigned_tasks = relationship("Tasks", back_populates="responsible", foreign_keys="Tasks.responsible_id")

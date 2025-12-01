@@ -11,11 +11,12 @@ class Tasks(Base):
     title = Column(String(100), nullable=False)
     description = Column(Text, nullable=True)
     deadline = Column(DateTime, nullable=True)
+    create_at = Column(DateTime, nullable=True)
 
     creator_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
     responsible_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
     project_id = Column(Integer, ForeignKey("projects.id", ondelete="SET NULL"), nullable=True)
 
-    creator = relationship("Users", back_populates="created_tasks")
-    responsible = relationship("Users", back_populates="assigned_tasks")
-    project = relationship("Ptojects", back_populates="Tasks")
+    creator = relationship("Users", back_populates="created_tasks", foreign_keys=[creator_id])
+    responsible = relationship("Users", back_populates="assigned_tasks", foreign_keys=[responsible_id])
+    project = relationship("Projects", back_populates="tasks")

@@ -9,10 +9,13 @@ class AddValueValidatorsMixin:
     def validate_value(self):
 
         for veriable in self.veriables:
-            value = getattr(self, veriable)
+            try:
+                value = getattr(self, veriable)
 
-            if not isinstance(value, str) or not value.strip():
-                raise ValueError("Поле не может быть пустым")
+                if not isinstance(value, str) or not value.strip():
+                    raise ValueError("Поле не может быть пустым")
+            except Exception:
+                continue
         
         return self
 
@@ -20,7 +23,7 @@ class AddValueValidatorsMixin:
 class PasswordValidatorMixin:
 
     @field_validator("password", mode="before")
-    def validate_password(self, value: str):
+    def validate_password(cls, value: str):
         if len(value) < 8:
             raise ValueError("Пароль должен содержать не менее 8 символов")
         if not re.search(r"[a-z]", value):

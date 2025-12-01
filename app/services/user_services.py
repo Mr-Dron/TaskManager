@@ -12,7 +12,7 @@ from app.exceptions.exceptions import *
 
 async def create_user(user_data: user_schemas.UserCreate, db: AsyncSession):
 
-    new_user_data = user_model.model_dump()
+    new_user_data = user_data.model_dump()
     new_user_data["create_at"] = datetime.now(timezone.utc)
     new_user_data["hashed_password"] = security.hash_pass(user_data.password)
     new_user_data.pop("password")

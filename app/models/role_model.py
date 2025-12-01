@@ -12,5 +12,5 @@ class Roles(Base):
     project_id = Column(Integer, ForeignKey("projects.id", ondelete="CASCADE"), nullable=False)
     
     project = relationship("Projects", back_populates="roles")
-    user_link = relationship("ProjectsMembers", back_populates="role")
+    user_link = relationship("ProjectMembers", back_populates="roles")
 
