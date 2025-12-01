@@ -24,7 +24,11 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 setup_exception_handler(app)
 
-app.include_router(test_routers.router)
+routers_list = [test_routers.router, users.router, 
+                projects.router, tasks.router, roles.router] 
+
+for router in routers_list:
+    app.include_router(router)
 
 
 @app.get("/", status_code=status.HTTP_200_OK, description="Test")
