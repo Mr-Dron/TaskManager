@@ -1,3 +1,1 @@
-CREATE USER appuser WITH PASSWORD 'i_yR41ap9Yo4';
-CREATE DATABASE taskmanagerdb OWNER appuser;
-GRANT ALL PRIVILEGES ON DATABASE taskmanagerdb TO appuser;
+
