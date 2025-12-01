@@ -22,7 +22,7 @@ async def create_user(user_data: user_schemas.UserCreate, db: AsyncSession):
     await db.flush()
     await db.refresh(new_user)
 
-    return user_helpers.get_short_user_by_id(db=db, id=new_user.id)
+    return await user_helpers.get_short_user_by_id(db=db, id=new_user.id)
 
 
 async def get_user(db: AsyncSession):
