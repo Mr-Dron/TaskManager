@@ -3,6 +3,7 @@ from typing import Optional
 from datetime import datetime
 
 from app.schemas.validators.value_validaroes import AddValueValidatorsMixin, PasswordValidatorMixin
+from app.schemas.validators.date_validators import OutDateValidatorMixin
 
 import re
 
@@ -27,7 +28,7 @@ class UserOutShort(BaseModel):
     email: str
 
 
-class UserOutFull(BaseModel):
+class UserOutFull(OutDateValidatorMixin, BaseModel):
 
     id: int
     username: str
