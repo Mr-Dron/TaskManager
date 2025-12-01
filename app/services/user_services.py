@@ -7,7 +7,7 @@ from datetime import datetime, timezone
 from app.schemas import *
 from app.config import security
 from app.models import *
-from app.services.helpers_service import *
+from app.services.helpers_service import user_helpers
 from app.exceptions.exceptions import *
 
 async def create_user(user_data: user_schemas.UserCreate, db: AsyncSession):
@@ -27,12 +27,12 @@ async def create_user(user_data: user_schemas.UserCreate, db: AsyncSession):
 
 async def get_user(db: AsyncSession):
 
-    result =(await db.execute(select(Users))).scalars().all()
+    all_users =(await db.execute(select(Users))).scalars().all()
 
-    if not result:
+    if not all_users:
         raise NotFoundError("Users")
 
-    return result
+    return all_users
 
 async def update_user(id: int, new_data: user_schemas.UserUpdate, db: AsyncSession):
 
@@ -42,12 +42,12 @@ async def update_user(id: int, new_data: user_schemas.UserUpdate, db: AsyncSessi
         .returning(Users)
     )
 
-    result = (await db.execute(stmt)).scalar_one_or_none()
+    updated_user = (await db.execute(stmt)).scalar_one_or_none()
 
-    if not result:
+    if not updated_user:
         raise NotFoundError(f"User id={id}")
     
-    return result
+    return updated_user
 
 
 async def delete_user(id: int, db: AsyncSession):
@@ -58,9 +58,9 @@ async def delete_user(id: int, db: AsyncSession):
         .returning(Users)
     )
 
-    result = (await db.execute(stmt)).scalar_one_or_none()
+    deleted_user = (await db.execute(stmt)).scalar_one_or_none()
 
-    if not result:
+    if not deleted_user:
         raise NotFoundError(f"User id={id}")
     
-    return result
+    return deleted_user
