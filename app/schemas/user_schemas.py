@@ -18,7 +18,7 @@ class UserCreate(AddValueValidatorsMixin, PasswordValidatorMixin, BaseModel):
 class UserUpdate(BaseModel):
 
     username: Optional[str] = None
-    email: Optional[str] = None
+    email: Optional[EmailStr] = None
 
 
 class UserOutShort(BaseModel):

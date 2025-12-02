@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     
     DATABASE_URL: str
 
+    GRAFANA_PASS: str
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"

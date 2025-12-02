@@ -35,7 +35,7 @@ class ProjectOutFull(OutDateValidatorMixin, BaseModel):
     description: Optional[str] = None
     deadline: Optional[str] = None
     
-    creator_id: int
+    creator_id: Optional[int] = None
 
 
 class TestProjectOutFull(OutDateValidatorMixin, BaseModel):

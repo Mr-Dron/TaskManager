@@ -86,7 +86,51 @@ services:
             - .:/app
         env_file: .env
         restart: unless-stopped
+    
+    loki:
+        image: grafana/loki:2.8.2
+        user: "0:0"
+        container_name: loki
+        command: -config.file=/etc/loki/local-config.yaml
+        ports:
+            - "3100:3100"
+        volumes:
+            - ./loki/local-config.yaml:/etc/loki/local-config.yaml:ro
+            - loki_data:/loki
+            - loki_wal:/wal
+        restart: unless-stopped
+    
+    promtail:
+        image: grafana/promtail:2.8.2
+        container_name: promtail
+        command: -config.file=/etc/promtail/config.yml
+        volumes:
+            - ./promtail/config.yml:/etc/promtail/config.yml:ro
+            - ./promtail/positions:/tmp/positions
+            - ./logs:/var/log/myapp:ro
+            - ./var/lib/docker/containers:/var/lib/docker/containers:ro
+        depends_on:
+            - loki
+        restart: unless-stopped
+
+    grafana:
+        image: grafana/grafana:10.4.3
+        container_name: grafana
+        ports:
+            - "3000:3000"
+        environment:
+            GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_PASS}
+        volumes: 
+            - grafana_data:/var/lib/grafana
+        depends_on:
+            - loki
+        restart: unless-stopped
+
 
 volumes:
     postgres_data:
     minio_data:
+    grafana_data:
+    loki_data:
+    loki_wal:
+

@@ -9,7 +9,7 @@ class ReadDateValidatorMixin:
         if value is None:
             return value
 
-        date_formats = [r"%Y-%m-%d %H:%M", r"%Y %m %d %H:%M",r"%Y/%m/%d %H:%M", r"%Y.%m.%d %H:%M"]
+        date_formats = [r"%Y-%m-%d %H:%M", r"%Y %m %d %H:%M", r"%Y/%m/%d %H:%M", r"%Y.%m.%d %H:%M"]
 
         for frm in date_formats:
             try:
