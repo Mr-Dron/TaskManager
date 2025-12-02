@@ -1,0 +1,2 @@
+{"asctime": "2025-12-02 16:49:16,061", "levelname": "INFO", "name": "main", "message": "App started", "app": "taskmanager", "env": "dev", "request_id": null, "user_id": null}
+{"asctime": "2025-12-02 17:16:47,490", "levelname": "INFO", "name": "main", "message": "App started", "app": "taskmanager", "env": "dev", "request_id": null, "user_id": null}

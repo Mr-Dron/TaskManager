@@ -5,3 +5,4 @@ venv/
 .vscode/
 __pycache__/
 password_generator.py
+positions.yaml
