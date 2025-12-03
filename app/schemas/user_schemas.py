@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr, field_validator
+from pydantic import BaseModel, EmailStr, ConfigDict
 from typing import Optional
 from datetime import datetime
 
@@ -27,6 +27,8 @@ class UserOutShort(BaseModel):
     username: str
     email: str
 
+    model_config = ConfigDict(from_attributes=True)
+
 
 class UserOutFull(OutDateValidatorMixin, BaseModel):
 
@@ -36,6 +38,8 @@ class UserOutFull(OutDateValidatorMixin, BaseModel):
 
     is_active: bool
     create_at: datetime
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class TestUserOutFull(BaseModel):
@@ -64,3 +68,4 @@ class TestUserOutFull(BaseModel):
     created_tasks: list[TaskOutShort]
     assigned_tasks: list[TaskOutShort]
 
+    model_config = ConfigDict(from_attributes=True)

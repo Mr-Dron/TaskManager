@@ -1,15 +1,23 @@
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, ConfigDict
 from typing import Optional
 from datetime import datetime
+
+from app.config.logging_config import get_logger
+
+logger = get_logger(name="project_schemas")
 
 from app.schemas.validators.date_validators import ReadDateValidatorMixin, OutDateValidatorMixin
 
 
 class ProjectCreate(ReadDateValidatorMixin, BaseModel):
 
+    logger.info("Schema by create", extra={"value": None, 
+                                  "type_value": None})  
+
     title: str
     description: Optional[str] = None
-    deadline: Optional[datetime] = None        
+    deadline: Optional[datetime] = None
+    
 
 
 class ProjetUpdate(ReadDateValidatorMixin, BaseModel):
@@ -21,9 +29,17 @@ class ProjetUpdate(ReadDateValidatorMixin, BaseModel):
 
 class ProjectOutShort(OutDateValidatorMixin, BaseModel):
 
+    logger.info("Schema by out", extra={"value": None, 
+                                  "type_value": None})  
     id: int
     title: str
     deadline: Optional[str] = None
+
+    # class Config():
+    #     from_attributes = True
+
+    model_config = ConfigDict(from_attributes=True)
+    
 
     
 
@@ -36,6 +52,8 @@ class ProjectOutFull(OutDateValidatorMixin, BaseModel):
     deadline: Optional[str] = None
     
     creator_id: Optional[int] = None
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class TestProjectOutFull(OutDateValidatorMixin, BaseModel):
@@ -70,3 +88,5 @@ class TestProjectOutFull(OutDateValidatorMixin, BaseModel):
     members: list[MembersOut]
     tasks: Optional[list[TasksOut]]
     roles: Optional[list[RolesOut]]
+
+    model_config = ConfigDict(from_attributes=True)

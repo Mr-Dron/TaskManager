@@ -7,7 +7,7 @@ from arq.connections import RedisSettings
 from app.config.settings import settings
 from app.routers import *
 from app.exceptions.error_handler import setup_exception_handler
-from app.logging_config import get_logger
+from app.config.logging_config import get_logger
 
 logger = get_logger("main")
 
@@ -26,10 +26,8 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-logger.info("App started", extra={"app": "taskmanager", 
-                                  "env": "dev", 
-                                  "request_id": None, 
-                                  "user_id": None})
+logger.info("App started", extra={"value": None, 
+                                  "type_value": None})
 
 setup_exception_handler(app)
 

@@ -1,4 +1,4 @@
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, ConfigDict
 from typing import Optional
 from datetime import datetime
 
@@ -30,6 +30,8 @@ class TaskOutShort(BaseModel):
 
     responsible_id: Optional[int] = None
 
+    model_config = ConfigDict(from_attributes=True)
+
 
 class TaskOutFull(BaseModel):
 
@@ -38,9 +40,11 @@ class TaskOutFull(BaseModel):
     description: Optional[str] = None
     deadline: Optional[datetime] = None
 
-    creator_id: int
+    creator_id: Optional[int]
     responsible_id: Optional[int] = None
     project_id: int
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class TestTaskOutFull(BaseModel):
@@ -67,3 +71,5 @@ class TestTaskOutFull(BaseModel):
     creator: UserOut
     responsible: UserOut
     project: ProjectOut
+
+    model_config = ConfigDict(from_attributes=True)

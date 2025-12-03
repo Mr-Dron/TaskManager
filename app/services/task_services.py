@@ -16,7 +16,7 @@ async def create_task(task_data: tasks_schemas.TaskCreate, db: AsyncSession):
 
     new_task_data = task_data.model_dump()
 
-    new_task = Tasks(new_task_data)
+    new_task = Tasks(**new_task_data)
 
     db.add(new_task)
 

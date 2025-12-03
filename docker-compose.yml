@@ -69,12 +69,15 @@ services:
 
     alembic:
         build: .
+        container_name: alembic
         command: tail -f /dev/null
         env_file: .env
         depends_on:
             - postgres
         volumes:
             - .:/app
+        environment:
+            DATABASE_URL: ${DATABASE_URL}
     
     arq:
         build: .
@@ -133,4 +136,3 @@ volumes:
     grafana_data:
     loki_data:
     loki_wal:
-

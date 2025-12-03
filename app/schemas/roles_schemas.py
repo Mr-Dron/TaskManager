@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import Optional
 
 
@@ -18,6 +18,8 @@ class RoleOut(BaseModel):
     id: int
     role: str
     project_id: int
+
+    model_config = ConfigDict(from_attributes=True)
 
 
 class TestRoleOutFull(BaseModel):
@@ -42,3 +44,5 @@ class TestRoleOutFull(BaseModel):
 
     project: ProjetcOut
     user_link: UserLinkOut
+
+    model_config = ConfigDict(from_attributes=True)

@@ -13,7 +13,7 @@ def get_logger(name: str = "app", level=logging.INFO):
     logger.propagate = True
 
     fmt = jsonlogger.JsonFormatter(
-        fmt="%(asctime)s %(levelname)s %(name)s %(message)s %(app)s %(env)s %(request_id)s %(user_id)s"
+        fmt="%(asctime)s %(levelname)s %(name)s %(message)s %(value)s %(type_value)s"
     )
 
     fh = logging.FileHandler(LOG_FILE, encoding="utf-8")

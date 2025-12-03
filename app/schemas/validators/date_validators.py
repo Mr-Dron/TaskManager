@@ -1,10 +1,17 @@
-from pydantic import field_validator, model_validator
+from pydantic import field_validator, field_serializer, model_validator
 from datetime import datetime
+
+from app.config.logging_config import get_logger
+
+logger = get_logger(name="date_validator")
 
 class ReadDateValidatorMixin:
 
     @field_validator("deadline", mode="before")
     def validate_date(cls, value):
+
+        logger.info("Start date validator", extra={"value": value, 
+                                  "type_value": type(value)})
 
         if value is None:
             return value
@@ -13,7 +20,10 @@ class ReadDateValidatorMixin:
 
         for frm in date_formats:
             try:
-                return datetime.strptime(value, frm)
+                correct_time = datetime.strptime(value, frm)
+                logger.info("Start date validator", extra={"value": correct_time, 
+                                  "type_value": type(correct_time)})
+                return correct_time
             except Exception:
                 continue
         
@@ -23,16 +33,15 @@ class ReadDateValidatorMixin:
 class OutDateValidatorMixin:
 
     datetime_fields = ["deadline", "create_at"]
+    date_format = r"%Y-%m-%d %H:%M"
 
-    @model_validator(mode="after")
-    def valiedate_date(self):
+    @field_validator("*", mode="before")
+    def validate_date(cls, value, info):       
 
-        date_format = r"%Y.%m.%d %H:%M"
+        logger.info("Start date out validator", extra={"value": value, 
+                                  "type_value": type(value)})
 
-        for field in self.datetime_fields:
-            value: datetime = getattr(self, field, None)
-
-            if isinstance(value, datetime):
-                setattr(self, field, value.strftime(date_format))
-            
-        return self
+        if info.field_name in cls.datetime_fields and isinstance(value, datetime):
+            return value.strftime(cls.date_format)
+        return value
+        

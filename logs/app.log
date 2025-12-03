@@ -6,3 +6,151 @@
 {"asctime": "2025-12-02 19:01:45,237", "levelname": "INFO", "name": "main", "message": "App started", "app": "taskmanager", "env": "dev", "request_id": null, "user_id": null}
 {"asctime": "2025-12-02 19:03:41,414", "levelname": "INFO", "name": "main", "message": "App started", "app": "taskmanager", "env": "dev", "request_id": null, "user_id": null}
 {"asctime": "2025-12-02 19:04:10,450", "levelname": "INFO", "name": "main", "message": "App started", "app": "taskmanager", "env": "dev", "request_id": null, "user_id": null}
+{"asctime": "2025-12-02 19:19:09,894", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-02 19:19:17,042", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-02 20:00", "type_value": "str"}
+{"asctime": "2025-12-03 13:05:08,716", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 13:11:43,461", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 13:53:06,083", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 13:53:55,916", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 13:55:03,426", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 13:55:08,560", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 13:55:10,416", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 13:55:13,380", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 13:55:39,133", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 14:07:20,961", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:07:27,594", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 14:07:27,601", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 14:21:26,210", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:21:26,449", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:21:28,833", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 14:21:28,840", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 14:22:40,259", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:22:40,452", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:22:43,607", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 14:22:43,609", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 14:25:21,871", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:25:21,876", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:25:22,082", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:25:23,613", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 14:25:23,615", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 14:26:50,168", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:27:00,238", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:27:00,242", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:27:00,400", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:27:38,675", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 14:27:38,677", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 14:37:26,510", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:37:26,514", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:37:26,730", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 14:37:40,619", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 14:37:40,623", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:23:12,507", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:23:12,512", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:23:12,704", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:23:15,579", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:23:15,580", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:24:06,346", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:06,348", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:06,560", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:08,140", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:24:08,145", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:24:17,797", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:17,804", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:17,980", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:19,619", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:24:19,624", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:24:51,597", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:51,600", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:51,857", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:24:52,762", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:24:52,767", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:25:23,588", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:25:23,592", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:25:23,746", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:25:26,810", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:25:26,818", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:25:33,207", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:25:33,217", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:25:33,416", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:25:35,036", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:25:35,044", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:44:27,851", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:44:27,855", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:44:28,011", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:44:31,078", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:44:31,085", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:46:56,116", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:46:56,118", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:46:56,242", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:46:59,436", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:46:59,439", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:47:43,259", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:47:43,262", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:47:43,493", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:47:44,636", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:47:44,639", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:48:00,801", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:48:00,807", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:48:01,013", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:48:03,148", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:48:03,156", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:48:17,713", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 10:53", "type_value": "str"}
+{"asctime": "2025-12-03 15:48:17,713", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T10:53:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:48:58,645", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 12:48", "type_value": "str"}
+{"asctime": "2025-12-03 15:48:58,646", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:50:30,235", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:50:30,242", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:50:30,429", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:50:32,305", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 12:48", "type_value": "str"}
+{"asctime": "2025-12-03 15:50:32,307", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 15:51:17,885", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:51:17,887", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:51:18,005", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 15:51:23,148", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 12:48", "type_value": "str"}
+{"asctime": "2025-12-03 15:51:23,152", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 18:04:44,863", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:04:44,866", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:04:45,111", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:04:47,554", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 12:48", "type_value": "str"}
+{"asctime": "2025-12-03 18:04:47,556", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 18:04:47,685", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": 23, "type_value": "int"}
+{"asctime": "2025-12-03 18:04:47,685", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
+{"asctime": "2025-12-03 18:04:47,686", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
+{"asctime": "2025-12-03 18:04:47,686", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 18:05:16,906", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:05:16,911", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:05:17,080", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:06:00,590", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": 23, "type_value": "int"}
+{"asctime": "2025-12-03 18:06:00,590", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
+{"asctime": "2025-12-03 18:06:00,590", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 18:06:58,686", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": 23, "type_value": "int"}
+{"asctime": "2025-12-03 18:06:58,686", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "andrey", "type_value": "str"}
+{"asctime": "2025-12-03 18:06:58,686", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "andrey", "type_value": "str"}
+{"asctime": "2025-12-03 18:06:58,687", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 18:07:52,058", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:07:52,060", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:07:52,206", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:12,252", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:12,258", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:12,463", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:35,317", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:35,324", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:35,639", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:54,594", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:54,598", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:08:54,830", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:10:05,205", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:10:05,207", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:10:05,375", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:10:40,532", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:10:40,533", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:10:40,668", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-03 18:14:37,961", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": 23, "type_value": "int"}
+{"asctime": "2025-12-03 18:14:37,962", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "andrey", "type_value": "str"}
+{"asctime": "2025-12-03 18:14:37,962", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 18:14:46,945", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03 12:48", "type_value": "str"}
+{"asctime": "2025-12-03 18:14:46,953", "levelname": "INFO", "name": "date_validator", "message": "Start date validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-03 18:14:46,973", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": 24, "type_value": "int"}
+{"asctime": "2025-12-03 18:14:46,973", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
+{"asctime": "2025-12-03 18:14:46,973", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
+{"asctime": "2025-12-03 18:14:46,973", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}

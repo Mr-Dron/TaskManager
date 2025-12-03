@@ -11,7 +11,9 @@ import os
 
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from app.config.settings import settings
+from dotenv import load_dotenv
+load_dotenv(".env")
+
 from app.db.database import Base
 from app.models import *
 
@@ -22,7 +24,8 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+DATABASE_URL = os.getenv("DATABASE_URL")
+config.set_main_option("sqlalchemy.url", DATABASE_URL)
 
 target_metadata = Base.metadata
 
@@ -62,7 +65,7 @@ if context.is_offline_mode():
 else:
     from sqlalchemy.ext.asyncio import create_async_engine
 
-    connactable = create_async_engine(settings.DATABASE_URL, poolclass=pool.NullPool)
+    connactable = create_async_engine(DATABASE_URL, poolclass=pool.NullPool)
 
     async def async_main():
         async with connactable.connect() as connection:
