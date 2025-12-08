@@ -42,6 +42,18 @@ class UserOutFull(OutDateValidatorMixin, BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+class UserLoginDocs(BaseModel):
+    username: EmailStr
+    password: str
+
+class OutToken(BaseModel):
+    access_token: str
+    type_token: str
+
 class TestUserOutFull(BaseModel):
 
     class ProjectOutShort(BaseModel):

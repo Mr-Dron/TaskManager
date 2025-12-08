@@ -10,10 +10,6 @@ from app.schemas.validators.date_validators import ReadDateValidatorMixin, OutDa
 
 
 class ProjectCreate(ReadDateValidatorMixin, BaseModel):
-
-    logger.info("Schema by create", extra={"value": None, 
-                                  "type_value": None})  
-
     title: str
     description: Optional[str] = None
     deadline: Optional[datetime] = None
@@ -29,11 +25,10 @@ class ProjetUpdate(ReadDateValidatorMixin, BaseModel):
 
 class ProjectOutShort(OutDateValidatorMixin, BaseModel):
 
-    logger.info("Schema by out", extra={"value": None, 
-                                  "type_value": None})  
     id: int
     title: str
     deadline: Optional[str] = None
+    creator_id: Optional[int] = None
 
     # class Config():
     #     from_attributes = True

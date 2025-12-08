@@ -23,6 +23,26 @@ class Settings(BaseSettings):
 
     GRAFANA_PASS: str
 
+    #Token
+    VERIFICATION_TOKEN_EXPIRE_MINUTES: int
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
+    ALGORITHM: str
+    SECRET_KEY: str
+
+    #email
+    MAIL_USERNAME: str
+    MAIL_PASSWORD: str
+    MAIL_FROM_NAME: str
+    MAIL_SERVER: str
+    MAIL_PORT: int
+    MAIL_STARTTLS: bool
+    MAIL_SSL: bool 
+
+    APP_DOMAIN: str
+    VEREFICATION_TOKEN_EXPIRE_MINUTES: int
+
+
+
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
