@@ -15,6 +15,9 @@ class Projects(Base):
     
 
     creator = relationship("Users", back_populates="created_projects")
-    members = relationship("ProjectMembers", back_populates="project")
+    
     tasks = relationship("Tasks", back_populates="project")
-    roles = relationship("Roles", back_populates="project")
+    
+    members = relationship("ProjectMembers", back_populates="project")
+    roles = relationship("ProjectRoles", back_populates="project")
+    members_roles = relationship("ProjectMemberRole", back_populates="project")
