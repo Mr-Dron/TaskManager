@@ -11,7 +11,7 @@ class Projects(Base):
     description = Column(Text, nullable=True)
     deadline = Column(DateTime, nullable=True)
 
-    cretor_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
+    creator_id = Column(Integer, ForeignKey("users.id", ondelete="SET NULL"), nullable=True)
     
 
     creator = relationship("Users", back_populates="created_projects")

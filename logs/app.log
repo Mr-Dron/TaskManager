@@ -154,3 +154,107 @@
 {"asctime": "2025-12-03 18:14:46,973", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
 {"asctime": "2025-12-03 18:14:46,973", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
 {"asctime": "2025-12-03 18:14:46,973", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-03T12:48:00", "type_value": "datetime"}
+{"asctime": "2025-12-08 13:50:48,877", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:50:48,879", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:52:17,805", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:52:17,807", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:52:17,907", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:01,731", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:01,733", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:01,780", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:11,809", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:11,811", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:11,862", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:20,550", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:20,553", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:53:20,609", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:55:01,191", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:55:01,194", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:55:01,324", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:57:04,238", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:57:04,241", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:57:04,474", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:57:50,031", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:57:50,037", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:57:50,184", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:58:20,301", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:58:20,304", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:58:20,362", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 13:59:13,850", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": 3, "type_value": "int"}
+{"asctime": "2025-12-08 13:59:13,854", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
+{"asctime": "2025-12-08 13:59:13,854", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey@example.com", "type_value": "str"}
+{"asctime": "2025-12-08 13:59:13,855", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": false, "type_value": "bool"}
+{"asctime": "2025-12-08 13:59:13,855", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-08T10:59:13.310270+00:00", "type_value": "datetime"}
+{"asctime": "2025-12-08 14:01:39,995", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:01:39,997", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:01:40,095", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:02:59,531", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:02:59,533", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:02:59,592", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:05:37,652", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:05:37,662", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:05:37,769", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:05:42,047", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='sergey@example.com' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-08 14:05:42,544", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:05:42,555", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": 4, "type_value": "int"}
+{"asctime": "2025-12-08 14:05:42,555", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey", "type_value": "str"}
+{"asctime": "2025-12-08 14:05:42,556", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "sergey@example.com", "type_value": "str"}
+{"asctime": "2025-12-08 14:05:42,556", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": false, "type_value": "bool"}
+{"asctime": "2025-12-08 14:05:42,556", "levelname": "INFO", "name": "date_validator", "message": "Start date out validator", "value": "2025-12-08T11:05:42.206799+00:00", "type_value": "datetime"}
+{"asctime": "2025-12-08 14:06:58,609", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:06:58,620", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:06:58,680", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:07:07,180", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='sergey@example.com' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-08 14:07:07,635", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:11:38,056", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:11:38,062", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:11:38,170", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:11:53,363", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='rusakovich_2000@mail.ru' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-08 14:11:53,891", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:17:43,890", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:17:43,893", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:17:43,992", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:17:46,107", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='rusakovich_2000@mail.ru' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-08 14:17:46,549", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:16,698", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:16,705", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:16,790", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:26,886", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:26,892", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:27,061", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:33,549", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:33,551", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:33,616", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:40,917", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:40,920", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:23:41,038", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:24:22,000", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:24:22,004", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:24:22,201", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:01,740", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:01,755", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:02,061", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:38,703", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:38,706", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:38,799", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:48,238", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:48,242", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:39:48,356", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:42:57,059", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:42:57,063", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:42:57,163", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:43:50,587", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:43:50,592", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:43:50,663", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:45:43,395", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:45:43,397", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:45:43,455", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:46:19,095", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:46:19,098", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:46:19,183", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:49:57,361", "levelname": "INFO", "name": "project_schemas", "message": "Schema by create", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:49:57,374", "levelname": "INFO", "name": "project_schemas", "message": "Schema by out", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:49:57,460", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:51:39,501", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:52:49,181", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-08 14:57:01,876", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}

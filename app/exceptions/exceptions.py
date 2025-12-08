@@ -12,3 +12,17 @@ class NotFoundError(AppExceptions):
 class OtherError(AppExceptions):
     def __init__(self, exc: str):
         super().__init__(detail=f"{exc}", status_code=status.HTTP_400_BAD_REQUEST)
+
+
+class UniqueError(AppExceptions):
+    def __init__(self, entity: str = "Entity"):
+        super().__init__(detail=f"{entity} is already exists", status_code=status.HTTP_400_BAD_REQUEST)
+
+
+class LoginError(AppExceptions):
+    def __init__(self):
+        super().__init__(detail="Invalid credentials")
+
+class TokenError(AppExceptions):
+    def __init__(self):
+        super().__init__(detail="Invalid token", status_code=status.HTTP_400_BAD_REQUEST)

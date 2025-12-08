@@ -10,10 +10,11 @@ from app.exceptions.exceptions import *
 from app.services.helpers_service import project_helpers
 
 
-async def create_project(project_data: project_schemas.ProjectCreate, db: AsyncSession):
+async def create_project(project_data: project_schemas.ProjectCreate, db: AsyncSession, current_user: Users):
 
     new_project_data = project_data.model_dump()
-    
+    new_project_data["creator_id"] = current_user.id
+
     new_project = Projects(**new_project_data)
 
     db.add(new_project)

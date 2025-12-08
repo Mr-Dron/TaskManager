@@ -10,9 +10,6 @@ class ReadDateValidatorMixin:
     @field_validator("deadline", mode="before")
     def validate_date(cls, value):
 
-        logger.info("Start date validator", extra={"value": value, 
-                                  "type_value": type(value)})
-
         if value is None:
             return value
 
@@ -21,8 +18,6 @@ class ReadDateValidatorMixin:
         for frm in date_formats:
             try:
                 correct_time = datetime.strptime(value, frm)
-                logger.info("Start date validator", extra={"value": correct_time, 
-                                  "type_value": type(correct_time)})
                 return correct_time
             except Exception:
                 continue
@@ -37,9 +32,6 @@ class OutDateValidatorMixin:
 
     @field_validator("*", mode="before")
     def validate_date(cls, value, info):       
-
-        logger.info("Start date out validator", extra={"value": value, 
-                                  "type_value": type(value)})
 
         if info.field_name in cls.datetime_fields and isinstance(value, datetime):
             return value.strftime(cls.date_format)
