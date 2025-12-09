@@ -22,6 +22,9 @@ async def create_project(project_data: project_schemas.ProjectCreate, db: AsyncS
     await db.flush()
     await db.refresh(new_project)
 
+    await project_helpers.add_member_in_project(new_project.id, current_user.email, db)
+    await project_helpers.create_role_creator(new_project.id, current_user.id, db)
+
     return await project_helpers.get_short_project_by_id(id=new_project.id, db=db)
 
 

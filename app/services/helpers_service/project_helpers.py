@@ -1,10 +1,12 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
-from sqlalchemy import select
+from sqlalchemy import select, and_, insert
 
-from app.models import *
+from app.models import Projects, Users, ProjectMembers, ProjectRoles, Roles, Permissions, ProjectRolePermissions, ProjectMemberRole
 from app.exceptions.exceptions import *
+from app.config.logging_config import get_logger
 
+logger = get_logger("Project helper")
 
 async def get_short_project_by_id(id: int, db: AsyncSession):
 
@@ -19,3 +21,96 @@ async def get_short_project_by_id(id: int, db: AsyncSession):
         raise NotFoundError(f"Project id={id}")
     
     return result
+
+async def add_member_in_project(project_id: int, user_email: str, db: AsyncSession):
+    """
+    Добавление пользователя в участники проекта
+    
+    :param project_id: Id проекта
+    :type project_id: int
+    :param user_email: почта пользователя (возможно в дальнейшем изменить на какой-нибудь уникальный код)
+    :type user_email: str
+    :param db: Сессия
+    :type db: AsyncSession
+    """
+
+    user_id = (await db.execute(select(Users.id)
+        .where(Users.email == user_email))).scalar_one_or_none()
+    
+    if not user_id:
+        raise NotFoundError("User")
+    
+    new_member = ProjectMembers(user_id=user_id,
+                                project_id=project_id)
+    
+    db.add(new_member)
+
+
+async def check_user_in_project(project_id: int, user_email: str, db: AsyncSession):
+    """
+    Проверка не является ли пользователь уже участником проекта. Функция НЕ вызывается при создании проекта.
+    Работает в связке с функцией add_member_in_project
+
+    !Соединить в одну функцию!
+    
+    :param project_id: Id проекта 
+    :type project_id: int
+    :param user_email: почта пользователя. 
+    :type user_email: str
+    :param db: Сессия
+    :type db: AsyncSession
+    """
+
+    stmt = (
+        select(Users.email)
+        .join(ProjectMembers, ProjectMembers.user_id == Users.id)
+        .where(and_(ProjectMembers.id == project_id, 
+                    Users.email == user_email))
+    )
+
+    found_user = (await db.execute(stmt)).scalar_one_or_none()
+
+    if found_user:
+        raise MembersError(f"user '{user_email}'")
+
+
+async def create_role_creator(project_id: int, user_id: int, db: AsyncSession) -> None:
+
+    creator_id = (await db.execute(select(Roles.id).where(Roles.role == "creator"))).scalar_one()
+
+    new_project_role = ProjectRoles(role_id=creator_id,
+                                    project_id=project_id)
+    
+    db.add(new_project_role)
+
+    await db.flush()
+    await db.refresh(new_project_role)
+
+    await add_permission_for_creator(new_project_role.id, db)
+
+    new_project_member_role = ProjectMemberRole(project_id=project_id,
+                                                user_id=user_id,
+                                                project_role_id=new_project_role.id)
+    
+    db.add(new_project_member_role)
+
+    await db.flush()
+    await db.refresh(new_project_member_role)
+
+
+
+async def add_permission_for_creator(project_role_id: int, db: AsyncSession):
+
+    permissions_on_db = (await db.execute(select(Permissions.id))).scalars().all()
+    creator_permissions = [{"project_role_id": project_role_id, "permission_id": perm_id} for perm_id in permissions_on_db]
+
+    stmt = insert(ProjectRolePermissions.__table__).returning(ProjectRolePermissions.__table__.c.permission_id)
+
+    result = await db.execute(stmt, creator_permissions)
+    result_id = [row[0] for row in result.fetchall()]
+
+    logger.info(result_id)
+
+
+async def role_assigment(project_id: int, user_id: int, project_role_id: int):
+    ...
