@@ -46,35 +46,20 @@ async def add_member_in_project(project_id: int, user_email: str, db: AsyncSessi
     db.add(new_member)
 
 
-async def check_user_in_project(project_id: int, user_email: str, db: AsyncSession):
+async def create_role_creator(project_id: int, user_id: int, db: AsyncSession) -> None:
     """
-    Проверка не является ли пользователь уже участником проекта. Функция НЕ вызывается при создании проекта.
-    Работает в связке с функцией add_member_in_project
-
-    !Соединить в одну функцию!
+    создание роли создателя проекта, передача ему всех прав над проектом и создание связей в таблицах
+    ProjectRoles: проект <-> роль
+    ProjectRolePermissions: роль в проекте <-> разрешения
+    ProjectMemberRole: проект <-> пользователь <-> роль
     
-    :param project_id: Id проекта 
+    :param project_id: Id проекта
     :type project_id: int
-    :param user_email: почта пользователя. 
-    :type user_email: str
+    :param user_id: id пользователя
+    :type user_id: int
     :param db: Сессия
     :type db: AsyncSession
     """
-
-    stmt = (
-        select(Users.email)
-        .join(ProjectMembers, ProjectMembers.user_id == Users.id)
-        .where(and_(ProjectMembers.id == project_id, 
-                    Users.email == user_email))
-    )
-
-    found_user = (await db.execute(stmt)).scalar_one_or_none()
-
-    if found_user:
-        raise MembersError(f"user '{user_email}'")
-
-
-async def create_role_creator(project_id: int, user_id: int, db: AsyncSession) -> None:
 
     creator_id = (await db.execute(select(Roles.id).where(Roles.role == "creator"))).scalar_one()
 
@@ -99,7 +84,15 @@ async def create_role_creator(project_id: int, user_id: int, db: AsyncSession) -
 
 
 
-async def add_permission_for_creator(project_role_id: int, db: AsyncSession):
+async def add_permission_for_creator(project_role_id: int, db: AsyncSession) -> None:
+    """
+    Функция для передачи всех возможных прав для создателя проекта
+    
+    :param project_role_id: Id проекта
+    :type project_role_id: int
+    :param db: Сессия
+    :type db: AsyncSession
+    """
 
     permissions_on_db = (await db.execute(select(Permissions.id))).scalars().all()
     creator_permissions = [{"project_role_id": project_role_id, "permission_id": perm_id} for perm_id in permissions_on_db]

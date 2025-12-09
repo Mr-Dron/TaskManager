@@ -36,7 +36,8 @@ class ProjectOutShort(OutDateValidatorMixin, BaseModel):
     model_config = ConfigDict(from_attributes=True)
     
 
-    
+class ProjectAddMember(BaseModel):
+    email: str
 
 
 class ProjectOutFull(OutDateValidatorMixin, BaseModel):
