@@ -4,12 +4,13 @@ from sqlalchemy import select, update, delete
 
 from datetime import datetime, timezone
 
-from app.models import *
-from app.schemas import *
-from app.exceptions.exceptions import *
+from app.models import Users, Projects, ProjectMembers
+from app.schemas import project_schemas
+from app.exceptions.exceptions import NotFoundError
 from app.services.helpers_service import project_helpers
 
 
+# сервис создания проекта
 async def create_project(project_data: project_schemas.ProjectCreate, db: AsyncSession, current_user: Users):
 
     new_project_data = project_data.model_dump()
@@ -28,6 +29,7 @@ async def create_project(project_data: project_schemas.ProjectCreate, db: AsyncS
     return await project_helpers.get_short_project_by_id(id=new_project.id, db=db)
 
 
+# получение всех проектов для теста
 async def get_all_projects(db: AsyncSession):
 
     all_projects = (await db.execute(select(Projects))).scalars().all()
@@ -36,6 +38,19 @@ async def get_all_projects(db: AsyncSession):
         raise NotFoundError("Projects")
     
     return all_projects
+
+# получение всех проектов пользователя
+async def get_projects(current_user: Users, db: AsyncSession):
+    stmt = (select(Projects)
+            .join(ProjectMembers, ProjectMembers.project_id == Projects.id)
+            .where(ProjectMembers.user_id == current_user.id))
+
+    projects = (await db.execute(stmt)).scalars().all()
+
+    if not projects:
+        raise NotFoundError("Projects")
+    
+    return projects
 
 
 async def update_project(id: int, new_data: project_schemas.ProjetUpdate, db: AsyncSession):

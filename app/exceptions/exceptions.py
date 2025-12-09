@@ -29,3 +29,7 @@ class TokenError(AppExceptions):
 class MembersError(AppExceptions):
     def __init__(self, entity: str = "User"):
         super().__init__(detail=f"The {entity} is already in the project", status_code=status.HTTP_400_BAD_REQUEST)
+
+class PermissionError(AppExceptions):
+    def __init__(self):
+        super().__init__(detail="Permission denied", status_code=status.HTTP_400_BAD_REQUEST)

@@ -262,3 +262,6 @@
 {"asctime": "2025-12-09 15:14:02,408", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='rusakovich_2000@mail.ru' password='16042002seR'", "type_value": "UserCreate"}
 {"asctime": "2025-12-09 15:14:02,792", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
 {"asctime": "2025-12-09 15:17:57,725", "levelname": "INFO", "name": "Project helper", "message": "[1, 2, 3, 4, 5, 6, 7, 8]", "value": null, "type_value": null}
+{"asctime": "2025-12-09 17:46:07,188", "levelname": "INFO", "name": "Common Helpers", "message": "[]", "value": null, "type_value": null}
+{"asctime": "2025-12-09 17:47:55,125", "levelname": "INFO", "name": "Project helper", "message": "[1, 2, 3, 4, 5, 6, 7, 8]", "value": null, "type_value": null}
+{"asctime": "2025-12-09 17:48:15,267", "levelname": "INFO", "name": "Common Helpers", "message": "['project.view', 'project.edit', 'project.delete', 'task.view', 'task.create', 'task.edit', 'task.delete', 'task.assign']", "value": null, "type_value": null}

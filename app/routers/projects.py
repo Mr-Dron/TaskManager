@@ -7,6 +7,7 @@ from app.schemas import *
 from app.models import Users
 
 from app.services import project_services
+from app.services.helpers_service.common_helpers import check_permission
 
 router = APIRouter(prefix="/projects", tags=["Projects"])
 
@@ -23,9 +24,9 @@ async def get_projects(db: AsyncSession=Depends(get_session)):
 
 
 # Обновление проекта
-@router.put("/{id}/", response_model=project_schemas.ProjectOutFull)
-async def update_project(id: int, data: project_schemas.ProjetUpdate, db: AsyncSession=Depends(get_session)):
-    return await project_services.update_project(id=id, new_data=data, db=db)
+@router.put("/{project_id}/", response_model=project_schemas.ProjectOutFull, dependencies=[Depends(check_permission("project.edit"))])
+async def update_project(project_id: int, data: project_schemas.ProjetUpdate, db: AsyncSession=Depends(get_session)):
+    return await project_services.update_project(id=project_id, new_data=data, db=db)
 
 
 # удаление проекта
