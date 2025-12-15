@@ -9,13 +9,13 @@ from app.services import role_services
 router = APIRouter(prefix="/role", tags=["Role"])
 
 # создание роли
-@router.post("/", response_model=roles_schemas.RoleOut, status_code=status.HTTP_201_CREATED)
+@router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_role(new_role: roles_schemas.RoleCreate, db: AsyncSession=Depends(get_session)):
     return await role_services.create_role_in_project(role_data=new_role, db=db)
 
 
 # вывод ролей
-@router.get("/", response_model=list[roles_schemas.RoleOut], status_code=status.HTTP_200_OK)
+@router.get("/", response_model=list[roles_schemas.RoleOutAll], status_code=status.HTTP_200_OK)
 async def get_roles(db: AsyncSession=Depends(get_session)):
     return await role_services.get_all_roles(db=db)
 
@@ -30,3 +30,9 @@ async def update_role(id: int, data: roles_schemas.RoleUpdate, db: AsyncSession=
 @router.delete("/{id}/", response_model=roles_schemas.RoleOut, status_code=status.HTTP_200_OK)
 async def delete_role(id: int, db: AsyncSession=Depends(get_session)):
     return await role_services.delete_role(id=id, db=db)
+
+
+# получение ролей проекта
+@router.get("/project/{project_id}/", response_model=list[roles_schemas.RoleOut], status_code=status.HTTP_200_OK)
+async def get_project_roles(project_id: int, db: AsyncSession=Depends(get_session)):
+    return await role_services.get_project_roles(project_id=project_id, db=db)

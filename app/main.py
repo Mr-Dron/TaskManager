@@ -8,16 +8,24 @@ from app.config.settings import settings
 from app.routers import *
 from app.exceptions.error_handler import setup_exception_handler
 from app.config.logging_config import get_logger
+from app.db.populating_db import sync_db
 
 logger = get_logger("main")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
 
+    # Создание пула redis 
     app.state.redis_pool = await create_pool(
         RedisSettings(host="127.0.0.1",
                       port=settings.REDIS_PORT)
     )
+
+    # Добавление базовых значений в бд
+    from app.db.database import AsyncSessionLocal
+
+    async with AsyncSessionLocal() as session:
+        await sync_db(session)
 
     yield
 
@@ -25,9 +33,6 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(lifespan=lifespan)
-
-logger.info("App started", extra={"value": None, 
-                                  "type_value": None})
 
 setup_exception_handler(app)
 

@@ -36,7 +36,12 @@ class ProjectOutShort(OutDateValidatorMixin, BaseModel):
     model_config = ConfigDict(from_attributes=True)
     
 
-    
+class ProjectAddMember(BaseModel):
+    email: str
+
+class ProjectAddMemberRole(BaseModel):
+    user_id: int
+    project_role_id: int
 
 
 class ProjectOutFull(OutDateValidatorMixin, BaseModel):

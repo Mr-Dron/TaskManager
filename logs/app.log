@@ -259,3 +259,22 @@
 {"asctime": "2025-12-08 14:52:49,181", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
 {"asctime": "2025-12-08 14:57:01,876", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
 {"asctime": "2025-12-08 16:28:58,780", "levelname": "INFO", "name": "main", "message": "App started", "value": null, "type_value": null}
+{"asctime": "2025-12-09 15:14:02,408", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='rusakovich_2000@mail.ru' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-09 15:14:02,792", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-09 15:17:57,725", "levelname": "INFO", "name": "Project helper", "message": "[1, 2, 3, 4, 5, 6, 7, 8]", "value": null, "type_value": null}
+{"asctime": "2025-12-09 17:46:07,188", "levelname": "INFO", "name": "Common Helpers", "message": "[]", "value": null, "type_value": null}
+{"asctime": "2025-12-09 17:47:55,125", "levelname": "INFO", "name": "Project helper", "message": "[1, 2, 3, 4, 5, 6, 7, 8]", "value": null, "type_value": null}
+{"asctime": "2025-12-09 17:48:15,267", "levelname": "INFO", "name": "Common Helpers", "message": "['project.view', 'project.edit', 'project.delete', 'task.view', 'task.create', 'task.edit', 'task.delete', 'task.assign']", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:37:43,109", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='rusakovich_2000@mail.ru' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-15 14:37:43,504", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:44:07,220", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='sergey' email='rusakovich_2000@mail.ru' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-15 14:44:07,560", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:44:54,679", "levelname": "INFO", "name": "Project helper", "message": "[1, 2, 3, 4, 5, 6, 7, 8, 9]", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:47:13,278", "levelname": "INFO", "name": "Project helper", "message": "[1, 2, 3, 4, 5, 6, 7, 8, 9]", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:47:42,368", "levelname": "INFO", "name": "Project helper", "message": "[1, 2, 3, 4, 5, 6, 7, 8, 9]", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:48:23,272", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='andrey' email='rusakovich_2000@mail.ru' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-15 14:51:49,149", "levelname": "INFO", "name": "User service", "message": "User start created", "value": "username='andrey' email='rusakovich112@gmail.com' password='16042002seR'", "type_value": "UserCreate"}
+{"asctime": "2025-12-15 14:51:49,544", "levelname": "INFO", "name": "User service", "message": "User created successfully", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:54:43,994", "levelname": "INFO", "name": "Common Helpers", "message": "['project.view', 'project.edit', 'project.delete', 'project.add_member', 'task.view', 'task.create', 'task.edit', 'task.delete', 'task.assign']", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:55:20,268", "levelname": "INFO", "name": "Common Helpers", "message": "['project.view', 'project.edit', 'project.delete', 'project.add_member', 'task.view', 'task.create', 'task.edit', 'task.delete', 'task.assign']", "value": null, "type_value": null}
+{"asctime": "2025-12-15 14:57:35,676", "levelname": "INFO", "name": "Role Helpers", "message": "[2, 4, 6]", "value": null, "type_value": null}

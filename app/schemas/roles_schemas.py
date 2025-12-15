@@ -6,17 +6,23 @@ class RoleCreate(BaseModel):
     
     role: str
     project_id: int
+    permissions_id: list[int]
 
 
 class RoleUpdate(BaseModel):
 
     role: str
 
+class RoleOutAll(BaseModel):
+    id: int
+    role: str
+
+    model_config = ConfigDict(from_attributes=True)
 
 class RoleOut(BaseModel):
 
     id: int
-    role: str
+    role_id: int
     project_id: int
 
     model_config = ConfigDict(from_attributes=True)
