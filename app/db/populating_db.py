@@ -1,5 +1,5 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, delete
+from sqlalchemy import select, delete, or_
 
 from app.config.permissions import ALL_PERMISSIONS
 from app.models import Roles, Permissions
@@ -20,13 +20,22 @@ async def sync_permission(session: AsyncSession):
 
 async def sync_roles(session:AsyncSession):
 
-    result = (await session.execute(select(Roles).where(Roles.role == "creator"))).scalar_one_or_none()
+    result = (await session.execute(select(Roles.role).where(or_(Roles.role == "creator",
+                                                                 Roles.role == "member")))).scalars().all()
 
-    if not result:
+    if not "creator" in result:
         new_role = Roles(role="creator")
         session.add(new_role)
 
         await session.commit()
+    
+    if not "member" in result:
+        new_role = Roles(role="member")
+        session.add(new_role)
+
+        await session.commit()
+    
+    
 
 
 async def sync_db(session: AsyncSession):

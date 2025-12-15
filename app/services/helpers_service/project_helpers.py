@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import selectinload
-from sqlalchemy import select, and_, insert
+from sqlalchemy import select, and_, insert, or_
 
 from app.models import Projects, Users, ProjectMembers, ProjectRoles, Roles, Permissions, ProjectRolePermissions, ProjectMemberRole
 from app.exceptions.exceptions import *
@@ -22,29 +22,6 @@ async def get_short_project_by_id(id: int, db: AsyncSession):
     
     return result
 
-async def add_member_in_project(project_id: int, user_email: str, db: AsyncSession):
-    """
-    Добавление пользователя в участники проекта
-    
-    :param project_id: Id проекта
-    :type project_id: int
-    :param user_email: почта пользователя (возможно в дальнейшем изменить на какой-нибудь уникальный код)
-    :type user_email: str
-    :param db: Сессия
-    :type db: AsyncSession
-    """
-
-    user_id = (await db.execute(select(Users.id)
-        .where(Users.email == user_email))).scalar_one_or_none()
-    
-    if not user_id:
-        raise NotFoundError("User")
-    
-    new_member = ProjectMembers(user_id=user_id,
-                                project_id=project_id)
-    
-    db.add(new_member)
-
 
 async def create_role_creator(project_id: int, user_id: int, db: AsyncSession) -> None:
     """
@@ -61,7 +38,7 @@ async def create_role_creator(project_id: int, user_id: int, db: AsyncSession) -
     :type db: AsyncSession
     """
 
-    creator_id = (await db.execute(select(Roles.id).where(Roles.role == "creator"))).scalar_one()
+    creator_id = (await db.execute(select(Roles.id).where(Roles.role == "creator"))).scalar_one_or_none()
 
     new_project_role = ProjectRoles(role_id=creator_id,
                                     project_id=project_id)
@@ -105,5 +82,3 @@ async def add_permission_for_creator(project_role_id: int, db: AsyncSession) -> 
     logger.info(result_id)
 
 
-async def role_assigment(project_id: int, user_id: int, project_role_id: int):
-    ...

@@ -38,9 +38,15 @@ async def delete_project(project_id: int, db: AsyncSession=Depends(get_session))
 
 
 #Добавление участника
-@router.post("/{project_id}/add_member/", response_model=project_schemas.ProjectOutFull, 
+@router.post("/{project_id}/add_member/", response_model=project_member_schemas.ProjectMemberOut, 
              dependencies=[Depends(check_permission("project.add_member")),
                            Depends(participation_check)],
              status_code=status.HTTP_200_OK)
-async def add_member(project_id: int, data: project_schemas.ProjectAddMember, current_user: Users=Depends(get_current_user), db: AsyncSession=Depends(get_session)):
-    return await ...
+async def add_member(project_id: int, data: project_schemas.ProjectAddMember, db: AsyncSession=Depends(get_session)):
+    return await project_services.add_member(project_id=project_id, data=data, db=db)
+
+
+#Назначение роли на проект 
+@router.post("/{project_id}/role_assign/", status_code=status.HTTP_200_OK)
+async def role_assignment(project_id: int, data: project_schemas.ProjectAddMemberRole, db: AsyncSession=Depends(get_session)):
+    return await project_services.role_assignment(project_id=project_id, data=data, db=db)

@@ -9,7 +9,7 @@ from app.config.dependencies import get_current_user
 from app.exceptions.exceptions import NotFoundError, PermissionError
 from app.config.logging_config import get_logger
 
-logger = get_logger("Permission Validator")
+logger = get_logger("Common Helpers")
 
 
 def check_permission(required_permission: str):

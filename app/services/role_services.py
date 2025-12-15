@@ -9,16 +9,22 @@ from app.services.helpers_service import role_helpers
 
 
 async def create_role_in_project(role_data: roles_schemas.RoleCreate, db: AsyncSession):
+    
+    # new_role_data = dict()
 
-    new_role_data = role_data.model_dump()
-    new_role = Roles(**new_role_data)
+    # for key, value in (role_data.model_dump()).items():
+    #     if key == "permissions":
+    #         continue
+    #     new_role_data[key] = value
+
+    new_role = Roles(role=role_data.role)
 
     db.add(new_role)
 
     await db.flush()
     await db.refresh(new_role)
 
-    return await role_helpers.get_role_by_id(id=new_role.id, db=db)
+    return await role_helpers.add_role_in_project(new_role.id, role_data.project_id, role_data.permissions_id, db)
 
 
 async def get_all_roles(db: AsyncSession):
@@ -63,3 +69,12 @@ async def delete_role(id: int, db: AsyncSession):
         raise NotFoundError(f"Role id={id}")
     
     return deleted_role
+
+
+async def get_project_roles(project_id: int, db: AsyncSession):
+
+    result = await db.execute(select(ProjectRoles).where(ProjectRoles.project_id == project_id))
+
+    roles = result.scalars().all()
+
+    return roles
