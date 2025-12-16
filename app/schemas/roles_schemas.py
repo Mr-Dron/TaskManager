@@ -5,13 +5,14 @@ from typing import Optional
 class RoleCreate(BaseModel):
     
     role: str
-    project_id: int
     permissions_id: list[int]
 
 
 class RoleUpdate(BaseModel):
 
+    role_id: int
     role: str
+    permissions: list[int]
 
 class RoleOutAll(BaseModel):
     id: int
