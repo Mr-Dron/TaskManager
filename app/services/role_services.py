@@ -36,14 +36,12 @@ async def get_all_roles(db: AsyncSession):
     
     return all_roles
 
-async def update_role(id: int, new_data: roles_schemas.RoleUpdate, db: AsyncSession):
-
-    update_data = new_data.model_dump(exclude_unset=True)
+async def update_role(project_role_id: int, data: roles_schemas.RoleUpdate, db: AsyncSession):
 
     stmt = (
         update(Roles)
-        .where(Roles.id == id)
-        .values(**update_data)
+        .where(Roles.id == data.role_id)
+        .values(data.role)
         .returning(Roles)
     )
 
@@ -52,7 +50,7 @@ async def update_role(id: int, new_data: roles_schemas.RoleUpdate, db: AsyncSess
     if not updated_role:
         raise NotFoundError(f"Roles id={id}")
     
-    return updated_role
+    return await role_helpers.update_role_permissions(project_role_id=project_role_id, permissions=data.permissions, db=db)
 
 
 async def delete_role(id: int, db: AsyncSession):
@@ -76,5 +74,6 @@ async def get_project_roles(project_id: int, db: AsyncSession):
     result = await db.execute(select(ProjectRoles).where(ProjectRoles.project_id == project_id))
 
     roles = result.scalars().all()
+
 
     return roles

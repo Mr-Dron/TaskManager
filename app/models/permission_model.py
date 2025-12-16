@@ -10,6 +10,7 @@ class Permissions(Base):
     id = Column(Integer, primary_key=True)
     permission_name = Column(String, nullable=False, index=True)
     descryption = Column(Text, nullable=True)
+    # level = Column(Integer, nullable=False, index=Ture)
     
     roles = relationship("ProjectRolePermissions", back_populates="permissions")
 

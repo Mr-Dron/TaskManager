@@ -66,7 +66,7 @@ async def add_permission_for_creator(project_role_id: int, db: AsyncSession) -> 
     Функция для передачи всех возможных прав для создателя проекта
     
     :param project_role_id: Id проекта
-    :type project_role_id: int
+    :type project_role_id: intS
     :param db: Сессия
     :type db: AsyncSession
     """
